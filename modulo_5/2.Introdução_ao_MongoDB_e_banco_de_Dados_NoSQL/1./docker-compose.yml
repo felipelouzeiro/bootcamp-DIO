@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  db:
+    image: mongo
+    container_name: db
+    restart: always
+    environment:
+      - MONGO-INTDB_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=felipe
+    ports:
+      - '27017:27017'
+    volumes:
+      - /home/felipe/Área de Trabalho/bootcamp/bootcamp-DIO/modulo_5/2.Introdução_ao_MongoDB_e_banco_de_Dados_NoSQL:/db
